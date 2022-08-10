@@ -1,6 +1,6 @@
 {
   "name": "bs-darkmode",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Bootstrap Darkmode is a bootstrap plugin/widget that supports toggling between light and dark theme",
   "main": "js/bs-darkmode.jquery.min.js",
   "files": [
@@ -36,8 +36,7 @@
   "bugs": {
     "url": "https://github.com/palcarazm/bs-darkmode/issues"
   },
-  "homepage": "https://palcarazm.github.io/bs-darkmode"
-  ,
+  "homepage": "https://palcarazm.github.io/bs-darkmode",
   "devDependencies": {
     "cypress": "^10.3.0",
     "cypress-plugin-tab": "^1.0.5",

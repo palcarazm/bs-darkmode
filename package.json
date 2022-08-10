@@ -49,7 +49,9 @@
     "grunt-contrib-uglify": "^5.2.1"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.0.0"
+  },
+  "optionalDependencies": {
     "jquery": "^3.6.0"
   }
 }

@@ -83,7 +83,7 @@ yarn add bs-darkmode
 Simply add `data-plugin="bsdarkmode"` to automatically convert an element to a Bootstrap.
 
 ```html
-<button class="btn btn-primary" data-plugin="bsdarkmode">
+<button class="btn btn-primary" data-plugin="bsdarkmode"></button>
 ```
 
 ## Initialize With Code
@@ -91,10 +91,10 @@ Toggles can also be initialized via JavaScript code.
 
 EX: Initialize id `darkmodeToggle` with a single line of JavaScript.
 ```html
-<button class="btn btn-primary" id="darkmodeToggle">
+<button class="btn btn-primary" id="darkmodeToggle"></button>
 <script>
   $(function(){
-    $('#darkmodeToggle').bootstrapToggle();
+    $('#darkmodeToggle').bsDarkmode();
   });
 </script>
 ```
@@ -106,8 +106,8 @@ EX: Initialize id `darkmodeToggle` with a single line of JavaScript.
 * For data attributes, append the option name to `data-` (ex: `data-state="light"`)
 
 ```html
-<button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'>
-<button class="btn btn-primary" id="darkmodeToggle">
+<button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'></button>
+<button class="btn btn-primary" id="darkmodeToggle"></button>
 <script>
   $(function() {
     $('#darkmodeToggle').bsDarkmode({
@@ -181,7 +181,7 @@ Var             |Type     |Default    |Description
 Methods can be used to control toggles directly.
 
 ```html
-<button class="btn btn-primary" id="darkmodeToggle">
+<button class="btn btn-primary" id="darkmodeToggle"></button>
 ```
 
 Method    |Example                                     |Description
@@ -199,7 +199,7 @@ Note All events are propagated to and from the element to the darkmode toggle.
 You should listen to events from the HTML element directly rather than look for custom events.
 
 ```html
-<button class="btn btn-primary" id="darkmodeToggle">
+<button class="btn btn-primary" id="darkmodeToggle" data-plugin="bsdarkmode"></button>
 <div id="console-event"></div>
 <script>
   $(function() {
@@ -211,10 +211,10 @@ You should listen to events from the HTML element directly rather than look for 
 ```
 
 ## Stopping Event Propagation
-Passing `true` to the light, dark, toggle, determinate and indeterminate methods will enable the silent option to prevent the control from propagating the change event in cases where you want to update the controls light/dark state, but do not want to fire the onChange event.
+Passing `true` to the light, dark and toggle methods will enable the silent option to prevent the control from propagating the change event in cases where you want to update the controls light/dark state, but do not want to fire the onChange event.
 
 ```html
-<button class="btn btn-primary" data-plugin="bsdarkmode" id="darkmodeToggle">
+<button class="btn btn-primary" data-plugin="bsdarkmode" id="darkmodeToggle"></button>
 <button class="btn btn-success" onclick="$('#darkmodeToggle').bsDarkmode('light',true)" >Light by API (silent)</button>
 <button class="btn btn-success" onclick="$('#darkmodeToggle').bsDarkmode('dark',true)">Dark by API (silent)</button>
 <button class="btn btn-warning" onclick="$('#darkmodeToggle').bsDarkmode('light')">Light by API (not silent)</button>

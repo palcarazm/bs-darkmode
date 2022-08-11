@@ -106,22 +106,28 @@ EX: Initialize id `darkmodeToggle` with a single line of JavaScript.
 * For data attributes, append the option name to `data-` (ex: `data-state="light"`)
 
 ```html
-<button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'></button>
-<button class="btn btn-primary" id="darkmodeToggle"></button>
+<div id="api-example">
+    <button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-root="#api-example"
+        data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}'
+        data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'></button>
+    <button class="btn btn-primary" id="darkmodeToggle"></button>
+</div>
 <script>
-  $(function() {
-    $('#darkmodeToggle').bsDarkmode({
-      state: true,
-      lightvars: '{"primary":"#FF0000","secondary":"#00FF00"}',
-      darkvars: '{"primary":"#0000FF","secondary":"#FFFF00"}'
-    });
-  })
+    $(function () {
+        $('#darkmodeToggle').bsDarkmode({
+            state: false,
+            root:'#api-example',
+            lightvars: '{"primary":"#FF0000","secondary":"#00FF00"}',
+            darkvars: '{"primary":"#0000FF","secondary":"#FFFF00"}'
+        });
+    })
 </script>
 ```
 
 Name        |Type   |Default |Description                 
 ------------|-------|--------|------------
 `state`     |boolean|true    |Initial state (For data-state use `light` or `dark`).
+`root`      |string |":root" |Root element to apply CSS vars
 `lightlabel`|html   |sun svg |Element inner HTML for light mode
 `darklabel` |html   |moon svg|Element inner HTML for dark mode
 `lightvars` |string |"{}"    |JSON object with CSS vars for light mode

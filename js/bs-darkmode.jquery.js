@@ -107,7 +107,7 @@
 	 * @param {Darkmode} target Darkmode
 	 */
     function actionPerformed(e, target){
-        target.toggle(true);
+        target.toggle(false);
         e.preventDefault();
     }
 

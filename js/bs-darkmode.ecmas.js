@@ -104,7 +104,7 @@
          * @private
          */
         #actionPerformed(e, target){
-            target.toggle(true);
+            target.toggle(false);
             e.preventDefault();
         }
 	}

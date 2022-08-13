@@ -17,13 +17,12 @@
     </li>
 </ul>
 <div class="example skip" code-lang="html">
-    <div id="api-example-1">
-        <button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-root="#api-example"
+    <div id="api-example-1" class="p-3">
+        <button class="btn btn-primary" data-plugin="bsdarkmode" data-root="#api-example-1" data-state="dark" data-root="#api-example"
             data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}'
             data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'></button>
-        <button class="btn btn-primary" id="darkmodeToggle"></button>
     </div>
-    <div id="api-example-2">
+    <div id="api-example-2" class="p-3">
         <button class="btn btn-primary" id="darkmodeToggle"></button>
     </div>
     <script>
@@ -41,7 +40,7 @@
     <div class="tab-pane fade show active" id="api-options-jquery" role="tabpanel"
         aria-labelledby="api-options-jquery-tab" tabindex="0">
         <pre><code class="highlight language-html">&lt;div id="api-example-1"&gt;
-    &lt;button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'&gt;&lt;/button&gt;
+    &lt;button class="btn btn-primary" data-plugin="bsdarkmode" data-root="#api-example-1" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'&gt;&lt;/button&gt;
 &lt;/div&gt;
 &lt;div id="api-example-2"&gt;
     &lt;button class="btn btn-primary" id="darkmodeToggle"&gt;&lt;/button&gt;
@@ -60,7 +59,7 @@ $('#darkmodeToggle').bsDarkmode({
     <div class="tab-pane fade" id="api-options-ecmas" role="tabpanel" aria-labelledby="api-options-ecmas-tab"
         tabindex="0">
         <pre><code class="highlight language-html">&lt;div id="api-example-1"&gt;
-    &lt;button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'&gt;&lt;/button&gt;
+    &lt;button class="btn btn-primary" data-plugin="bsdarkmode" data-root="#api-example-1" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'&gt;&lt;/button&gt;
 &lt;/div&gt;
 &lt;div id="api-example-2"&gt;
     &lt;button class="btn btn-primary" id="darkmodeToggle"&gt;&lt;/button&gt;
@@ -93,7 +92,10 @@ $('#darkmodeToggle').bsDarkmode({
                 <td><code>state</code></td>
                 <td class="text-nowrap">boolean</td>
                 <td><code>true</code></td>
-                <td>Initial state (For data-state use <em>light</em> or <em>dark</em>)</td>
+                <td>
+                    Initial state (For data-state use <em>light</em> or <em>dark</em>).</br>
+                    <small>The user preferred color scheme dark is prioritary.</small>
+                </td>
             </tr>
             <tr>
                 <td><code>root</code></td>
@@ -409,7 +411,7 @@ $('#darkmodeToggle').bsDarkmode({
 </div>
 
 <div class="alert alert-info" role="alert">
-    <i class="fas fa-info-circle"aria-hidden="true"></i> Theme colors are also exposed in HSL with <code>{themecolor}-h</code>, <code>{themecolor}-s</code> and <code>{themecolor}-l</code>and in RGB with <code>{themecolor}-rgb</code>.
+    <i class="fas fa-info-circle"aria-hidden="true"></i> Theme colors are also exposed in HSL with <code>{themecolor}-h</code>, <code>{themecolor}-s</code> and <code>{themecolor}-l</code> and in RGB with <code>{themecolor}-rgb</code>.
 </div>
 
 <h3 class="text-secondary">Methods</h3>

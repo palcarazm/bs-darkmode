@@ -13,6 +13,8 @@
 
 (function() {
 	class Darkmode {
+        DARKMODE_CLASS = 'bs-darkmode';
+
 		constructor(element, options) {
 			const DEFAULTS = {
                 state: true,
@@ -73,6 +75,27 @@
             Object.entries(cssvars).forEach(([key, value]) => {
                 target.style.setProperty("--"+key,value);
             });
+
+            // 3: Add HSL theme Colors
+            const THEMECOLORS = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
+            let hsl, rgb;
+            Object.entries(cssvars).forEach(([key, value]) => {
+                if(THEMECOLORS.includes(key)){
+                    rgb = this.#hexToRGB(value);
+                    hsl = this.#hexToHSL(value);
+                    target.style.setProperty("--"+key+"-h",hsl.h);
+                    target.style.setProperty("--"+key+"-s",hsl.s+'%');
+                    target.style.setProperty("--"+key+"-l",hsl.l+'%');
+                    target.style.setProperty("--"+key+"-rgb",rgb.r+','+rgb.g+','+rgb.b);
+                }
+            });
+
+            // 4: Add or remove Darkmode Class
+            if (this.options.state) {
+                target.classList.remove(this.DARKMODE_CLASS);
+            }else{
+                target.classList.add(this.DARKMODE_CLASS);
+            }
         }
 
         toggle = function (silent = false) {
@@ -109,7 +132,70 @@
             target.toggle(false);
             e.preventDefault();
         }
-	}
+
+        /**
+         * Convert Hex to HSL color space
+         * @param {String} H Hex value '#rgb' or '#rrggbb'
+         * @returns {Array} HSL value [h,s,l]
+         */
+        #hexToHSL(H) {
+            // Convert hex to RGB first
+            let rgb = this.#hexToRGB(H);
+            let r = rgb.r;
+            let g = rgb.g;
+            let b = rgb.b;
+            // Then to HSL
+            r /= 255;
+            g /= 255;
+            b /= 255;
+            let cmin = Math.min(r,g,b),
+                cmax = Math.max(r,g,b),
+                delta = cmax - cmin,
+                h = 0,
+                s = 0,
+                l = 0;
+            
+            if (delta == 0)
+                h = 0;
+            else if (cmax == r)
+                h = ((g - b) / delta) % 6;
+            else if (cmax == g)
+                h = (b - r) / delta + 2;
+            else
+                h = (r - g) / delta + 4;
+            
+            h = Math.round(h * 60);
+            
+            if (h < 0)
+                h += 360;
+            
+            l = (cmax + cmin) / 2;
+            s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+            s = +(s * 100).toFixed(1);
+            l = +(l * 100).toFixed(1);
+            
+            return {h:h,s:s,l:l};
+        }
+
+        /**
+         * Convert Hex to RGB color space
+         * @param {String} H Hex value '#rgb' or '#rrggbb'
+         * @returns {Array} RGB value [r,g,b]
+         */
+        #hexToRGB(H) {
+            let r = 0, g = 0, b = 0;
+            if (H.length == 4) {
+                r = parseInt("0x" + H[1] + H[1]);
+                g = parseInt("0x" + H[2] + H[2]);
+                b = parseInt("0x" + H[3] + H[3]);
+            } else if (H.length == 7) {
+                r = parseInt("0x" + H[1] + H[2]);
+                g = parseInt("0x" + H[3] + H[4]);
+                b = parseInt("0x" + H[5] + H[6]);
+            }
+            return {r:r,g:g,b:b};       
+        }
+    }
 
 	/**
 	 * Add `bsDarkmode` prototype function to HTML Elements

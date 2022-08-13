@@ -136,52 +136,43 @@ Name        |Type   |Default |Description
 ## CSS Vars to change
 The following CSS Vars that can be changed form `lightvars` and `darkvars` attributes.
 
-Var             |Type     |Default    |Description
-----------------|---------|-----------|-----------
-`blue`          |HEX color|#0d6efd    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`indigo`        |HEX color|#6610f2    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`purple`        |HEX color|#6f42c1    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`pink`          |HEX color|#d63384    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`red`           |HEX color|#dc3545    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`orange`        |HEX color|#fd7e14    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`yellow`        |HEX color|#ffc107    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`green`         |HEX color|#198754    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`teal`          |HEX color|#20c997    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`cyan`          |HEX color|#0dcaf0    |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
-`gray`          |HEX color|#6c757d    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-dark`     |HEX color|#343a40    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-100`      |HEX color|#f8f9fa    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-200`      |HEX color|#e9ecef    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-300`      |HEX color|#dee2e6    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-400`      |HEX color|#ced4da    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-500`      |HEX color|#adb5bd    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-600`      |HEX color|#6c757d    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-700`      |HEX color|#495057    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-800`      |HEX color|#343a40    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`gray-900`      |HEX color|#212529    |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
-`primary`       |HEX color|#0d6efd    |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`secondary`     |HEX color|#6c757d    |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`success`       |HEX color|#198754    |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`info`          |HEX color|#0dcaf0    |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`warning`       |HEX color|#ffc107    |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`danger`        |HEX color|#dc3545    |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`light`         |HEX color|#f8f9fa    |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`dark`          |HEX color|#212529    |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`primary-rgb`   |RGB color|13,110,253 |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`secondary-rgb` |RGB color|108,117,125|Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`success-rgb`   |RGB color|25,135,84  |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`info-rgb`      |RGB color|13,202,240 |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`warning-rgb`   |RGB color|255,193,7  |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`danger-rgb`    |RGB color|220,53,69  |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`light-rgb`     |RGB color|248,249,250|Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`dark-rgb`      |RGB color|33,37,41   |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
-`black`         |HEX color|#000       |Black color
-`white`         |HEX color|#fff       |White color
-`white-rgb`     |RGB color|255,255,255|Black rgb color
-`black-rgb`     |RGB color|0,0,0      |White rgb color
-`body-color-rgb`|RGB color|33,37,41   |Body rgb color
-`body-bg-rgb`   |RGB color|255,255,255|Body background rgb color
+Var             |Type     |Default Ligth|Default Dark|Description
+----------------|---------|-------------|------------|-----------
+`blue`          |HEX color|#0d6efd      |#3f6791     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`indigo`        |HEX color|#6610f2      |#6610f2     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`purple`        |HEX color|#6f42c1      |#6f42c1     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`pink`          |HEX color|#d63384      |#e83e8c     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`red`           |HEX color|#dc3545      |#e74c3c     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`orange`        |HEX color|#fd7e14      |#fd7e14     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`yellow`        |HEX color|#ffc107      |#f39c12     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`green`         |HEX color|#198754      |#00bc8c     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`teal`          |HEX color|#20c997      |#20c997     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`cyan`          |HEX color|#0dcaf0      |#3498db     |Standard Bootstrap [color](https://getbootstrap.com/docs/4.0/getting-started/theming/#all-colors)
+`gray`          |HEX color|#6c757d      |#ced4da     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-dark`     |HEX color|#343a40      |#e9ecef     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-100`      |HEX color|#f8f9fa      |#212529     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-200`      |HEX color|#e9ecef      |#343a40     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-300`      |HEX color|#dee2e6      |#495057     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-400`      |HEX color|#ced4da      |#6c757d     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-500`      |HEX color|#adb5bd      |#adb5bd     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-600`      |HEX color|#6c757d      |#ced4da     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-700`      |HEX color|#495057      |#dee2e6     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-800`      |HEX color|#343a40      |#e9ecef     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`gray-900`      |HEX color|#212529      |#f8f9fa     |Standard Bootstrap [gray color](https://getbootstrap.com/docs/4.0/getting-started/theming/#grays)
+`primary`       |HEX color|#0d6efd      |#3f6791     |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
+`secondary`     |HEX color|#6c757d      |#ced4da     |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
+`success`       |HEX color|#198754      |#00bc8c     |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
+`info`          |HEX color|#0dcaf0      |#3498db     |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
+`warning`       |HEX color|#ffc107      |#f39c12     |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
+`danger`        |HEX color|#dc3545      |#e74c3c     |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
+`light`         |HEX color|#f8f9fa      |#212529     |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
+`dark`          |HEX color|#212529      |#f8f9fa     |Standard Bootstrap [theme color](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors)
+`body-color`    |HEX color|#212529      |#f8f9fa     |Body color
+`body-bg`       |HEX color|#fff         |#495057     |Body background color
+`white`         |HEX color|#fff         |#000        |White color
+`black`         |HEX color|#000         |#fff        |Black color
 
+Theme colors are also exposed in HSL with `{themecolor}-h`, `{themecolor}-s` and `{themecolor}-l`and in RGB with `{themecolor}-rgb`.
 
 ## Methods
 Methods can be used to control toggles directly.

@@ -13,7 +13,8 @@
 
 (function() {
 	class Darkmode {
-        DARKMODE_CLASS = 'bs-darkmode';
+        DARKMODE_CLASS  = 'bs-darkmode';
+        LIGHTMODE_CLASS = 'bs-lightmode';
 
 		constructor(element, options) {
 			const DEFAULTS = {
@@ -85,7 +86,7 @@
                 if(THEMECOLORS.includes(key)){
                     rgb = this.#hexToRGB(value);
                     hsl = this.#hexToHSL(value);
-                    target.style.setProperty("--"+key+"-h",hsl.h);
+                    target.style.setProperty("--"+key+"-h",hsl.h+'');
                     target.style.setProperty("--"+key+"-s",hsl.s+'%');
                     target.style.setProperty("--"+key+"-l",hsl.l+'%');
                     target.style.setProperty("--"+key+"-rgb",rgb.r+','+rgb.g+','+rgb.b);
@@ -95,8 +96,10 @@
             // 4: Add or remove Darkmode Class
             if (this.options.state) {
                 target.classList.remove(this.DARKMODE_CLASS);
+                target.classList.add(this.LIGHTMODE_CLASS);
             }else{
                 target.classList.add(this.DARKMODE_CLASS);
+                target.classList.remove(this.LIGHTMODE_CLASS);
             }
         }
 

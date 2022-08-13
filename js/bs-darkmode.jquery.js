@@ -30,7 +30,8 @@
         darkvars:'{}',
     }
 
-    Darkmode.prototype.DARKMODE_CLASS = 'bs-darkmode';
+    Darkmode.prototype.DARKMODE_CLASS  = 'bs-darkmode';
+    Darkmode.prototype.LIGHTMODE_CLASS = 'bs-lightmode';
 
     Darkmode.prototype.defaults = function() {
         const COLORSCHEME = getColorScheme(this);
@@ -85,7 +86,7 @@
             if(THEMECOLORS.includes(key)){
                 rgb = hexToRGB(value);
                 hsl = hexToHSL(value);
-                target.css("--"+key+"-h",hsl.h);
+                target.css("--"+key+"-h",hsl.h+'');
                 target.css("--"+key+"-s",hsl.s+'%');
                 target.css("--"+key+"-l",hsl.l+'%');
                 target.css("--"+key+"-rgb",rgb.r+','+rgb.g+','+rgb.b);
@@ -95,8 +96,10 @@
         // 4: Add or remove Darkmode Class
         if (this.options.state) {
             target.removeClass(this.DARKMODE_CLASS);
+            target.addClass(this.LIGHTMODE_CLASS);
         }else{
             target.addClass(this.DARKMODE_CLASS);
+            target.removeClass(this.LIGHTMODE_CLASS);
         }
     }
 
@@ -171,7 +174,7 @@
         let r = rgb.r;
         let g = rgb.g;
         let b = rgb.b;
-        console.log(rgb);
+
         // Then to HSL
         r /= 255;
         g /= 255;

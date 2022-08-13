@@ -172,7 +172,7 @@ Var             |Type     |Default Ligth|Default Dark|Description
 `white`         |HEX color|#fff         |#000        |White color
 `black`         |HEX color|#000         |#fff        |Black color
 
-Theme colors are also exposed in HSL with `{themecolor}-h`, `{themecolor}-s` and `{themecolor}-l`.
+Theme colors are also exposed in HSL with `{themecolor}-h`, `{themecolor}-s` and `{themecolor}-l`and in RGB with `{themecolor}-rgb`.
 
 ## Methods
 Methods can be used to control toggles directly.

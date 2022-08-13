@@ -79,13 +79,15 @@
 
         // 3: Add HSL theme Colors
         const THEMECOLORS = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
-        let hsl;
+        let hsl, rgb;
         Object.entries(cssvars).forEach(([key, value]) => {
             if(THEMECOLORS.includes(key)){
+                rgb = hexToRGB(value);
                 hsl = hexToHSL(value);
-                target.css("--"+key+"-h",hsl[0]);
-                target.css("--"+key+"-s",hsl[1]+'%');
-                target.css("--"+key+"-l",hsl[2]+'%');
+                target.css("--"+key+"-h",hsl.h);
+                target.css("--"+key+"-s",hsl.s+'%');
+                target.css("--"+key+"-l",hsl.l+'%');
+                target.css("--"+key+"-rgb",rgb.r+','+rgb.g+','+rgb.b);
             }
         });
 
@@ -139,16 +141,11 @@
      */
     function hexToHSL(H) {
         // Convert hex to RGB first
-        let r = 0, g = 0, b = 0;
-        if (H.length == 4) {
-            r = "0x" + H[1] + H[1];
-            g = "0x" + H[2] + H[2];
-            b = "0x" + H[3] + H[3];
-        } else if (H.length == 7) {
-            r = "0x" + H[1] + H[2];
-            g = "0x" + H[3] + H[4];
-            b = "0x" + H[5] + H[6];
-        }
+        let rgb = hexToRGB(H);
+        let r = rgb.r;
+        let g = rgb.g;
+        let b = rgb.b;
+        console.log(rgb);
         // Then to HSL
         r /= 255;
         g /= 255;
@@ -179,7 +176,25 @@
         s = +(s * 100).toFixed(1);
         l = +(l * 100).toFixed(1);
         
-        return [h,s,l];
+        return {h:h,s:s,l:l};
+    }
+    /**
+     * Convert Hex to RGB color space
+     * @param {String} H Hex value '#rgb' or '#rrggbb'
+     * @returns {Array} RGB value [r,g,b]
+     */
+    function hexToRGB(H) {
+        let r = 0, g = 0, b = 0;
+        if (H.length == 4) {
+            r = parseInt("0x" + H[1] + H[1]);
+            g = parseInt("0x" + H[2] + H[2]);
+            b = parseInt("0x" + H[3] + H[3]);
+        } else if (H.length == 7) {
+            r = parseInt("0x" + H[1] + H[2]);
+            g = parseInt("0x" + H[3] + H[4]);
+            b = parseInt("0x" + H[5] + H[6]);
+        }
+        return {r:r,g:g,b:b};    
     }
 
     function Plugin(option) {

@@ -33,7 +33,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Package:**
 (please complete the following information)
- - Bootstrap Darmode version: [e.g. 1.0.0]
+ - Bootstrap Darkmode version: [e.g. 1.0.0]
  - Bootstrap version: [e.g. 4.0.0]
 
 **Desktop:**

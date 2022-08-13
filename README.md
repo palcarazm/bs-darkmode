@@ -24,6 +24,9 @@ Branch | Bootstrap Support | Last Release
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
+- [Bootstrap Darkmode](#bootstrap-darkmode)
+      - [Library Distributions](#library-distributions)
+- [Demos](#demos)
 - [Installation](#installation)
   - [CDN](#cdn)
     - [jQuery Interface](#jquery-interface)
@@ -126,7 +129,7 @@ EX: Initialize id `darkmodeToggle` with a single line of JavaScript.
 
 Name        |Type   |Default |Description                 
 ------------|-------|--------|------------
-`state`     |boolean|true    |Initial state (For data-state use `light` or `dark`).
+`state`     |boolean|true    |Initial state (For data-state use `light` or `dark`). The user preferred color scheme dark is prioritary.
 `root`      |string |":root" |Root element to apply CSS vars
 `lightlabel`|html   |sun svg |Element inner HTML for light mode
 `darklabel` |html   |moon svg|Element inner HTML for dark mode

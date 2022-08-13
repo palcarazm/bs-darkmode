@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>bs-darkmode | Test App</title>
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bs-darkmode.css">
+
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../js/bs-darkmode.jquery.js"></script>
+
+	<script>
+		const INTERFACE = 'JQUERY';
+		let Bootstrap;
+		let plugin;
+	</script>
+</head>
+
+<body class="bg-light p-4">
+	<div id="appHeader" class="container position-sticky bg-light" style="top: 0rem;z-index: 1;">
+		<div class="row align-items-center">
+			<div class="col-10">
+				<h1 class="text-primary fw-light">Test App: bs-darkmode</h1>
+			</div>
+			<div class="col-2 text-end" id="env-data"></div>
+		</div>
+		<div class="btn-group" role="group" id="test-selector"></div>
+		<div class="px-1 text-muted fw-bolder" id="description">
+			<button class="btn btn-primary" data-plugin="bsdarkmode" data-root="main"></button>
+		</div>
+		<hr>
+	</div>
+	<main class="container bg-white px-3 py-3 rounded">
+		<h2>Colors</h2>
+		<p class="text-primary">.text-primary</p>
+		<p class="text-secondary">.text-secondary</p>
+		<p class="text-success">.text-success</p>
+		<p class="text-danger">.text-danger</p>
+		<p class="text-warning">.text-warning</p>
+		<p class="text-info">.text-info</p>
+		<p class="text-light bg-dark">.text-light</p>
+		<p class="text-dark">.text-dark</p>
+		<p class="text-body">.text-body</p>
+		<p class="text-muted">.text-muted</p>
+		<p class="text-white bg-dark">.text-white</p>
+		<p class="text-black-50">.text-black-50</p>
+		<p class="text-white-50 bg-dark">.text-white-50</p>
+
+		<h2>Background</h2>
+		<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+		<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+		<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+		<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+		<div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+		<div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+		<div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+		<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+		<div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+		<div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+
+		<h2>Border</h2>
+		<span class="border border-primary" style="display: inline-block; width: 5rem; height: 5rem; margin: 0.25rem; background-color: var(--gray-200);"></span>
+		<span class="border border-secondary" style="display: inline-block; width: 5rem; height: 5rem; margin: 0.25rem; background-color: var(--gray-200);"></span>
+		<span class="border border-success" style="display: inline-block; width: 5rem; height: 5rem; margin: 0.25rem; background-color: var(--gray-200);"></span>
+		<span class="border border-danger" style="display: inline-block; width: 5rem; height: 5rem; margin: 0.25rem; background-color: var(--gray-200);"></span>
+		<span class="border border-warning" style="display: inline-block; width: 5rem; height: 5rem; margin: 0.25rem; background-color: var(--gray-200);"></span>
+		<span class="border border-info" style="display: inline-block; width: 5rem; height: 5rem; margin: 0.25rem; background-color: var(--gray-200);"></span>
+		<span class="border border-light" style="display: inline-block; width: 5rem; height: 5rem; margin: 0.25rem; background-color: var(--gray-200);"></span>
+		<span class="border border-dark" style="display: inline-block; width: 5rem; height: 5rem; margin: 0.25rem; background-color: var(--gray-200);"></span>
+		<span class="border border-white" style="display: inline-block; width: 5rem; height: 5rem; margin: 0.25rem; background-color: var(--gray-200);"></span>
+	
+		<h2>Alert</h2>
+		<div class="alert alert-primary" role="alert">A simple primary alert—check it out!</div>
+		<div class="alert alert-secondary" role="alert">A simple secondary alert—check it out!</div>
+		<div class="alert alert-success" role="alert">A simple success alert—check it out!</div>
+		<div class="alert alert-danger" role="alert">A simple danger alert—check it out!</div>
+		<div class="alert alert-warning" role="alert">A simple warning alert—check it out!</div>
+		<div class="alert alert-info" role="alert">A simple info alert—check it out!</div>
+		<div class="alert alert-light" role="alert">A simple light alert—check it out!</div>
+		<div class="alert alert-dark" role="alert">A simple dark alert—check it out!</div>
+	
+		<h2>Badge</h2>
+		<span class="badge badge-primary">Primary</span>
+		<span class="badge badge-secondary">Secondary</span>
+		<span class="badge badge-success">Success</span>
+		<span class="badge badge-danger">Danger</span>
+		<span class="badge badge-warning">Warning</span>
+		<span class="badge badge-info">Info</span>
+		<span class="badge badge-light">Light</span>
+		<span class="badge badge-dark">Dark</span>
+
+		<h2>Solid Button</h2>
+		<button type="button" class="btn btn-primary">Primary</button>
+		<button type="button" class="btn btn-secondary">Secondary</button>
+		<button type="button" class="btn btn-success">Success</button>
+		<button type="button" class="btn btn-danger">Danger</button>
+		<button type="button" class="btn btn-warning">Warning</button>
+		<button type="button" class="btn btn-info">Info</button>
+		<button type="button" class="btn btn-light">Light</button>
+		<button type="button" class="btn btn-dark">Dark</button>
+		<button type="button" class="btn btn-link">Link</button>
+
+		<h2>Outline Button</h2>
+		<button type="button" class="btn btn-outline-primary">Primary</button>
+		<button type="button" class="btn btn-outline-secondary">Secondary</button>
+		<button type="button" class="btn btn-outline-success">Success</button>
+		<button type="button" class="btn btn-outline-danger">Danger</button>
+		<button type="button" class="btn btn-outline-warning">Warning</button>
+		<button type="button" class="btn btn-outline-info">Info</button>
+		<button type="button" class="btn btn-outline-light">Light</button>
+		<button type="button" class="btn btn-outline-dark">Dark</button>
+
+		<h2>Progress Bar</h2>
+		<div class="progress mb-2">
+			<div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Label Primary</div>
+		</div>
+		<div class="progress mb-2">
+			<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Label Secondary</div>
+		</div>
+		<div class="progress mb-2">
+			<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Label Success</div>
+		</div>
+		<div class="progress mb-2">
+			<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Label Info</div>
+		</div>
+		<div class="progress mb-2">
+			<div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Label Warning</div>
+		</div>
+		<div class="progress">
+			<div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Label Danger</div>
+		</div>
+	</main>
+</body>
+
+<script src="test-app.js"></script>
+<!--<script src="test-loader.js"></script>
+<script src="test-runner.js"></script>-->
+</html>

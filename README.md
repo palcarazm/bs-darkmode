@@ -4,7 +4,7 @@
 [![NPM Badge](https://img.shields.io/npm/dm/bs-darkmode?logo=npm&color=success)](https://www.npmjs.com/package/bs-darkmode)
 [![Maintenance](https://img.shields.io/badge/maintained%3F-yes-success.svg)](https://github.com/palcarazm/bs-darkmode/graphs/contributors)
 [![Funding](https://img.shields.io/badge/sponsor-30363D?style=flat&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/palcarazm)
-[![Rate this package](https://badges.openbase.com/js/rating/bs-darkmode.svg?token=rNvznTVToo+EmX5g+KTvfYqI9+YTWJeUWTxPj7tLA6o=)](https://openbase.com/js/bs-darkmode?utm_source=embedded&utm_medium=badge&utm_campaign=rating-badge&utm_term=js/bs-darkmode)
+[![Rate this package](https://badges.openbase.com/js/rating/bs-darkmode.svg?)](https://openbase.com/js/bs-darkmode?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
 
 # Bootstrap Darkmode
 

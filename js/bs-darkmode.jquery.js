@@ -30,8 +30,8 @@
         darkvars:'{}',
     }
 
-    Darkmode.prototype.DARKMODE_CLASS  = 'bs-darkmode';
-    Darkmode.prototype.LIGHTMODE_CLASS = 'bs-lightmode';
+    Darkmode.prototype.DARKMODE_CLASS  = 'bs-darkmode-dark';
+    Darkmode.prototype.LIGHTMODE_CLASS = 'bs-darkmode-light';
 
     Darkmode.prototype.defaults = function() {
         const COLORSCHEME = getColorScheme(this);

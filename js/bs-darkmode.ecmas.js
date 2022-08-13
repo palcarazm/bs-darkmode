@@ -13,8 +13,8 @@
 
 (function() {
 	class Darkmode {
-        DARKMODE_CLASS  = 'bs-darkmode';
-        LIGHTMODE_CLASS = 'bs-lightmode';
+        DARKMODE_CLASS  = 'bs-darkmode-dark';
+        LIGHTMODE_CLASS = 'bs-darkmode-light';
 
 		constructor(element, options) {
 			const DEFAULTS = {

@@ -30,14 +30,9 @@
 			this.element = element;
 
 			// B: Set options
-            let elementState = null;
-            if (this.element.getAttribute('data-state') === 'light') {
-                elementState = true;
-            }else if (this.element.getAttribute('data-state') === 'dark'){
-                elementState =  false;
-            }
+            const COLORSCHEME = this.#getColorScheme();
 			this.options = {
-				state: elementState == null ? DEFAULTS.state : elementState,
+				state: COLORSCHEME === null ? DEFAULTS.state : COLORSCHEME,
                 root: this.element.getAttribute('data-root') || options.root || DEFAULTS.root,
                 lightlabel: this.element.getAttribute('data-lightlabel') || options.lightlabel || DEFAULTS.lightlabel,
                 darklabel: this.element.getAttribute('data-darklabel') || options.darklabel || DEFAULTS.darklabel,
@@ -48,7 +43,7 @@
 			// LAST: initialize
             this.#init();
 		}
-		
+
         #init() {
             // 1: Render darkmode
             this.#render();
@@ -56,6 +51,13 @@
             // 2: Add listener
             this.element.addEventListener('touchstart', (e)=>{this.#actionPerformed(e,this);});
             this.element.addEventListener('click', (e)=>{this.#actionPerformed(e,this);});
+            if (window.matchMedia){
+                window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+                    if (this.options.state != e.matches){
+                        this.#actionPerformed(e,this);
+                    }
+                });
+            }
 
             // 3: Keep reference to this instance for subsequent calls via `getElementById().bsDarkmode()`
 			this.element._bsDarkmode = this;
@@ -120,6 +122,30 @@
     
         #trigger = function (silent) {
             if (!silent) this.element.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+
+        /**
+         * Get the color scheme to set
+         * @returns {Boolean} Color Scheme (light -> true / dark -> false)
+         */
+        #getColorScheme(){
+            let state = null;
+
+            // User Preferred Scheme Dark
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+                state = false;
+            }
+
+            // Element Data
+            if(state === null){
+                if (this.element.getAttribute('data-state') === 'light') {
+                    state = true;
+                }else if (this.element.getAttribute('data-state') === 'dark'){
+                    state =  false;
+                }
+            }
+
+            return state;    
         }
 
         /**

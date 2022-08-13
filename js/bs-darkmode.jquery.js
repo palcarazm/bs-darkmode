@@ -33,15 +33,9 @@
     Darkmode.prototype.DARKMODE_CLASS = 'bs-darkmode';
 
     Darkmode.prototype.defaults = function() {
-        let elementState = null;
-        if (this.$element.attr('data-state') === 'light') {
-            elementState = true;
-        }else if (this.$element.attr('data-state') === 'dark'){
-            elementState =  false;
-        }
-
+        const COLORSCHEME = getColorScheme(this);
         return {
-            state: elementState == null ? Darkmode.DEFAULTS.state : elementState,
+            state: COLORSCHEME === null ? Darkmode.DEFAULTS.state : COLORSCHEME,
             root: this.$element.attr('data-root') || Darkmode.DEFAULTS.root,
             lightlabel: this.$element.attr('data-lightlabel') || Darkmode.DEFAULTS.lightlabel,
             darklabel: this.$element.attr('data-darklabel') || Darkmode.DEFAULTS.darklabel,
@@ -57,6 +51,13 @@
         // 2: Add listener
         this.$element.on('touchstart', (e)=>{actionPerformed(e,this);});
         this.$element.on('click', (e)=>{actionPerformed(e,this);});
+        if (window.matchMedia){
+            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+                if (this.options.state != e.matches){
+                    actionPerformed(e,this);
+                }
+            });
+        }
     }
 
     /**
@@ -122,6 +123,31 @@
     Darkmode.prototype.trigger = function (silent) {
 		if (!silent) this.$element.trigger("change");
 	}
+
+    /**
+     * Get the color scheme to set
+     * @param {Darkmode} target Darkmode toggle element
+     * @returns {Boolean} Color Scheme (light -> true / dark -> false)
+     */
+    function getColorScheme(target){
+        let state = null;
+
+        // User Preferred Scheme Dark
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+            state = false;
+        }
+
+        // Element Data
+        if(state === null){
+            if (target.$element.attr('data-state') === 'light') {
+                state = true;
+            }else if (target.$element.attr('data-state') === 'dark'){
+                state =  false;
+            }
+        }
+    
+        return state;    
+    }
 
 
     /**

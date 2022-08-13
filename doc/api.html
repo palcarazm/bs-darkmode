@@ -17,52 +17,69 @@
     </li>
 </ul>
 <div class="example skip" code-lang="html">
-    <button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark"
-        data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}'
-        data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'></button>
+    <div id="api-example-1">
+        <button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-root="#api-example"
+            data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}'
+            data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'></button>
         <button class="btn btn-primary" id="darkmodeToggle"></button>
-            <script>
-                $(function () {
-                    $('#darkmodeToggle').bsDarkmode({
-                        state: true,
-                        lightvars: '{"primary":"#FF0000","secondary":"#00FF00"}',
-                        darkvars: '{"primary":"#0000FF","secondary":"#FFFF00"}'
-                    });
-                })
-            </script>
+    </div>
+    <div id="api-example-2">
+        <button class="btn btn-primary" id="darkmodeToggle"></button>
+    </div>
+    <script>
+        $(function () {
+            $('#darkmodeToggle').bsDarkmode({
+                state: false,
+                root:'#api-example-2',
+                lightvars: '{"primary":"#FF0000","secondary":"#00FF00"}',
+                darkvars: '{"primary":"#0000FF","secondary":"#FFFF00"}'
+            });
+        })
+    </script>
 </div>
 <div class="tab-content">
     <div class="tab-pane fade show active" id="api-options-jquery" role="tabpanel"
         aria-labelledby="api-options-jquery-tab" tabindex="0">
-        <pre><code class="highlight language-html">&lt;button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'&gt;&lt;/button&gt;
-&lt;button class="btn btn-primary" id="darkmodeToggle"&gt;&lt;/button&gt;
+        <pre><code class="highlight language-html">&lt;div id="api-example-1"&gt;
+    &lt;button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id="api-example-2"&gt;
+    &lt;button class="btn btn-primary" id="darkmodeToggle"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+$(function() {
+$('#darkmodeToggle').bsDarkmode({
+    state: false,
+    root:'#api-example-2',
+    lightvars: '{"primary":"#FF0000","secondary":"#00FF00"}',
+    darkvars: '{"primary":"#0000FF","secondary":"#FFFF00"}'
+});
+})
+&lt;/script&gt;</code></pre>
+    </div>
+    <div class="tab-pane fade" id="api-options-ecmas" role="tabpanel" aria-labelledby="api-options-ecmas-tab"
+        tabindex="0">
+        <pre><code class="highlight language-html">&lt;div id="api-example-1"&gt;
+    &lt;button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id="api-example-2"&gt;
+    &lt;button class="btn btn-primary" id="darkmodeToggle"&gt;&lt;/button&gt;
+&lt;/div&gt;
 &lt;script&gt;
     $(function() {
-    $('#darkmodeToggle').bsDarkmode({
-        state: true,
+    document.querySelector('#darkmodeToggle').bsDarkmode({
+        state: false,
+        root:'#api-example-2',
         lightvars: '{"primary":"#FF0000","secondary":"#00FF00"}',
         darkvars: '{"primary":"#0000FF","secondary":"#FFFF00"}'
     });
     })
 &lt;/script&gt;</code></pre>
     </div>
-    <div class="tab-pane fade" id="api-options-ecmas" role="tabpanel" aria-labelledby="api-options-ecmas-tab"
-        tabindex="0">
-        <pre><code class="highlight language-html">&lt;button class="btn btn-primary" data-plugin="bsdarkmode" data-state="dark" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'&gt;&lt;/button&gt;
-    &lt;button class="btn btn-primary" id="darkmodeToggle"&gt;&lt;/button&gt;
-    &lt;script&gt;
-        $(function() {
-        document.querySelector('#darkmodeToggle').bsDarkmode({
-            state: true,
-            lightvars: '{"primary":"#FF0000","secondary":"#00FF00"}',
-            darkvars: '{"primary":"#0000FF","secondary":"#FFFF00"}'
-        });
-        })
-    &lt;/script&gt;</code></pre>
-    </div>
 </div>
 <div class="table-responsive">
     <table class="table table-striped table-condensed">
+        <caption>Bootstrap Darkmode API options</caption>
         <thead>
             <tr>
                 <th>Name</th>
@@ -77,6 +94,12 @@
                 <td class="text-nowrap">boolean</td>
                 <td><code>true</code></td>
                 <td>Initial state (For data-state use <em>light</em> or <em>dark</em>)</td>
+            </tr>
+            <tr>
+                <td><code>root</code></td>
+                <td>string</td>
+                <td><code class="text-nowrap">":root"</code></td>
+                <td>Root element to apply CSS vars</td>
             </tr>
             <tr>
                 <td><code>lightlabel</code></td>
@@ -110,6 +133,7 @@
 <p>The following CSS Vars that can be changed form <code>lightvars</code> and <code>darkvars</code> attributes.</p>
 <div class="table-responsive">
     <table class="table table-striped table-condensed">
+        <caption>Bootstrap Darkmode CSS Vars description</caption>
         <thead>
             <tr>
                 <th>Var</th>
@@ -441,6 +465,7 @@
 </div>
 <div class="table-responsive">
     <table class="table table-striped table-condensed">
+        <caption>Bootstrap Darkmode API methods description</caption>
         <thead>
             <tr>
                 <th>Method</th>
@@ -481,6 +506,6 @@
     </table>
 </div>
 <div class="alert alert-info position-relative" role="alert">
-    <i class="fas fa-info-circle"></i> For ECMAS JavaScript replace <code>$('#toggle-demo')...</code> with
+    <i class="fas fa-info-circle" aria-hidden="true"></i> For ECMAS JavaScript replace <code>$('#toggle-demo')...</code> with
     <code>document.querySelector('#toggle-demo')...</code>
 </div>

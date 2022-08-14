@@ -478,7 +478,7 @@ a[class*='bs-darkmode-']:not(.btn):hover, [class*='bs-darkmode-'] a:not(.btn):ho
     --alert-theme-l: var(--primary-l);;
     --alert-theme-a: 1;
 }
-[class*='bs-darkmode-'] .alert-secondary
+[class*='bs-darkmode-'] .alert-secondary,
 [class*='bs-darkmode-'].alert-secondary{
     --alert-theme-h: var(--secondary-h);;
     --alert-theme-s: var(--secondary-s);;

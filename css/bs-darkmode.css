@@ -22,7 +22,15 @@
     --teal: #20c997;
     --cyan: #0dcaf0;
     --black: #000;
+    --black-rgb: 0,0,0;
     --white: #fff;
+    --white-rgb: 255,255,255;
+    --black-h: 0;
+    --black-s: 0%;
+    --black-l: 0%;
+    --white-h: 0;
+    --white-s: 0%;
+    --white-l: 100%;
     --gray: #6c757d;
     --gray-dark: #343a40;
     --gray-100: #f8f9fa;
@@ -92,6 +100,14 @@
     --cyan: #3498db;
     --black: #fff;
     --white: #000;
+    --black-rgb: 255,255,255;
+    --white-rgb: 0,0,0;
+    --black-h: 0;
+    --black-s: 0%;
+    --black-l: 100%;
+    --white-h: 0;
+    --white-s: 0%;
+    --white-l: 0%;
     --gray: #ced4da;
     --gray-dark: #e9ecef;
     --gray-900: #f8f9fa;
@@ -147,11 +163,13 @@
     --dark-l: 98%;
 }
 
-/* MAP BODY COLORS */
+/* MAP HTML ELEMENTS BASIC COLORS */
 [class*='bs-darkmode-']{
     background-color: var(--body-bg);
     color: var(--body-color);
 }
+a[class*='bs-darkmode-'], [class*='bs-darkmode-'] a{color:var(--blue);}
+a[class*='bs-darkmode-']:not(.btn):hover, [class*='bs-darkmode-'] a:not(.btn):hover{filter: brightness(.8);}
 
 
 /* MAP TEXT COLORS */
@@ -522,4 +540,16 @@
 [class*='bs-darkmode-'] .jumbotron,
 [class*='bs-darkmode-'].jumbotron{
     background-color:var(--gray-200);
+}
+
+/* MAP CARD COLORS */
+[class*='bs-darkmode-'] .card,
+[class*='bs-darkmode-'].card{
+    background-color:var(--body-bg);
+    border-color: rgba(var(--black-rgb), 0.125);
+}
+[class*='bs-darkmode-'] .card-header, [class*='bs-darkmode-'] .card-footer,
+[class*='bs-darkmode-'].card-header, [class*='bs-darkmode-'].card-footer{
+    background-color:rgba(var(--black-rgb), 0.03);
+    border-color: rgba(var(--black-rgb), 0.125);
 }

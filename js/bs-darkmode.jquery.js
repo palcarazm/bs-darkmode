@@ -80,7 +80,7 @@
         });
 
         // 3: Add HSL theme Colors
-        const THEMECOLORS = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
+        const THEMECOLORS = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'white', 'black'];
         let hsl, rgb;
         Object.entries(cssvars).forEach(([key, value]) => {
             if(THEMECOLORS.includes(key)){

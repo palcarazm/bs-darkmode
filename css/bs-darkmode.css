@@ -553,3 +553,14 @@ a[class*='bs-darkmode-']:not(.btn):hover, [class*='bs-darkmode-'] a:not(.btn):ho
     background-color:rgba(var(--black-rgb), 0.03);
     border-color: rgba(var(--black-rgb), 0.125);
 }
+
+/* MAP TABLE COLORS */
+[class*='bs-darkmode-'] .table, [class*='bs-darkmode-'].table{ color: var(--body-color);}
+[class*='bs-darkmode-'] .table td, [class*='bs-darkmode-'].table td,
+[class*='bs-darkmode-'] .table th, [class*='bs-darkmode-'].table th{
+    border-color: var(--gray-200);
+}
+[class*='bs-darkmode-'] .table-striped tbody tr:nth-of-type(odd),
+[class*='bs-darkmode-'].table-striped tbody tr:nth-of-type(odd){
+    background-color: rgba(var(--black-rgb),.05);
+}

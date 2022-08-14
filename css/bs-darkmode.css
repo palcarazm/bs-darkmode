@@ -517,3 +517,9 @@
     --alert-bg-darkness:5.5;
     --alert-bg-saturation:.1;
 }
+
+/* MAP JUMBOTRON COLORS */
+[class*='bs-darkmode-'] .jumbotron,
+[class*='bs-darkmode-'].jumbotron{
+    background-color:var(--gray-200);
+}

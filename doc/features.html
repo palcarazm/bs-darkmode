@@ -2,10 +2,21 @@
 <hr>
 
 <h3 class="text-secondary">State</h3>
-<p>Bootstrap Darkmode initial state can be set by <code>data-state</code> attribute.</p>
+<p>
+    Bootstrap Darkmode initial state can be set by <code>data-state</code> attribute.</br>
+    <small>The user preferred color scheme dark is prioritary.</small>
+</p>
 <div class="example" code-lang="html">
     <button class="btn btn-primary" data-plugin="bsdarkmode" data-state="light"></button>
     <button class="btn btn-primary" data-plugin="bsdarkmode"data-state="dark"></button>
+</div>
+
+<h3 class="text-secondary">Custom Root Element</h3>
+<p>Bootstrap Darkmode root element can be set by <code>data-root</code> attribute.</p>
+<div class="example" code-lang="html">
+    <div id="root-example">
+        <button class="btn btn-primary" data-plugin="bsdarkmode" data-root="#root-example"></button>
+    </div>
 </div>
 
 <h3 class="text-secondary">Custom Label</h3>

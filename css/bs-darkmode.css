@@ -564,3 +564,57 @@ a[class*='bs-darkmode-']:not(.btn):hover, [class*='bs-darkmode-'] a:not(.btn):ho
 [class*='bs-darkmode-'].table-striped tbody tr:nth-of-type(odd){
     background-color: rgba(var(--black-rgb),.05);
 }
+
+/* MAP FORM COLORS */
+[class*='bs-darkmode-'] .form-control,
+[class*='bs-darkmode-'] .custom-select,
+[class*='bs-darkmode-'] .custom-file-label{
+    color: var(--gray-700);
+    border-color: var(--gray-400);
+    background-color:var(--body-bg);
+}
+
+[class*='bs-darkmode-'] .form-control:disabled, [class*='bs-darkmode-'] .form-control[readonly]{background-color: var(--gray-200);}
+[class*='bs-darkmode-'] .form-control-plaintext{color: var(--body-color);}
+
+[class*='bs-darkmode-'] .form-control.is-valid, [class*='bs-darkmode-'] .was-validated .form-control:valid,
+[class*='bs-darkmode-'] .custom-select.is-valid, [class*='bs-darkmode-'] .was-validated .custom-select:valid,
+[class*='bs-darkmode-'] .custom-file-input.is-valid~.custom-file-label, [class*='bs-darkmode-'] .was-validated .custom-file-input:valid~.custom-file-label,
+[class*='bs-darkmode-'] .custom-control-input.is-valid~.custom-control-label::before, [class*='bs-darkmode-'] .was-validated .custom-control-input:valid~.custom-control-label::before{
+ border-color: var(--success);
+}
+[class*='bs-darkmode-'] .valid-feedback{color: var(--success);}
+[class*='bs-darkmode-'] .form-control.is-invalid, [class*='bs-darkmode-'] .was-validated .form-control:invalid,
+[class*='bs-darkmode-'] .custom-select.is-invalid, [class*='bs-darkmode-'] .was-validated .custom-select:invalid,
+[class*='bs-darkmode-'] .custom-file-input.is-invalid~.custom-file-label, [class*='bs-darkmode-'] .was-validated .custom-file-input:invalid~.custom-file-label,
+[class*='bs-darkmode-'] .custom-control-input.is-invalid~.custom-control-label::before, [class*='bs-darkmode-'] .was-validated .custom-control-input:invalid~.custom-control-label::before{
+    border-color: var(--danger);
+}
+[class*='bs-darkmode-'] .invalid-feedback{ color: var(--danger);}
+
+[class*='bs-darkmode-'] .custom-control-input:disabled~.custom-control-label::before,
+[class*='bs-darkmode-'] .custom-control-input[disabled]~.custom-control-label::before{
+    background-color: var(--gray-200);
+}
+[class*='bs-darkmode-'] .custom-control-input:disabled~.custom-control-label,
+[class*='bs-darkmode-'] .custom-control-input[disabled]~.custom-control-label{
+    color:var(--gray);
+}
+
+.bs-darkmode-light .custom-select{
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+}
+.bs-darkmode-dark .custom-select{
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23e9ecef' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+}
+
+[class*='bs-darkmode-'] .custom-file-label::after{
+    color: var(--gray-700);
+    background-color:var(--gray-200);
+}
+
+[class*='bs-darkmode-'] .input-group-text{
+    color: var(--gray-700);
+    border-color: var(--gray-400);
+    background-color:var(--gray-200);
+}

@@ -169,7 +169,8 @@
     color: var(--body-color);
 }
 a[class*='bs-darkmode-'], [class*='bs-darkmode-'] a{color:var(--blue);}
-a[class*='bs-darkmode-']:not(.btn):hover, [class*='bs-darkmode-'] a:not(.btn):hover{filter: brightness(.8);}
+a[class*='bs-darkmode-']:not(.btn):not(.nav-link):not(.dropdown-item):not(.navbar-brand):hover,
+ [class*='bs-darkmode-'] a:not(.btn):not(.nav-link):not(.dropdown-item):not(.navbar-brand):hover{filter: brightness(.8);}
 
 
 /* MAP TEXT COLORS */
@@ -623,3 +624,57 @@ a[class*='bs-darkmode-']:not(.btn):hover, [class*='bs-darkmode-'] a:not(.btn):ho
 [class*='bs-darkmode-'] .breadcrumb, [class*='bs-darkmode-'].breadcrumb {background-color: var(--gray-200);}
 [class*='bs-darkmode-'] .breadcrumb-item.active{color: var(--gray);}
 [class*='bs-darkmode-'] .breadcrumb-item+.breadcrumb-item::before{color: var(--gray);}
+
+/* MAP NAVBARS AND NAVS */
+[class*='bs-darkmode-'] .navbar-light .navbar-nav .nav-link{color: rgba(var(--black-rgb),.5);}
+[class*='bs-darkmode-'] .navbar-light .navbar-nav .active>.nav-link, [class*='bs-darkmode-'] .navbar-light .navbar-nav .nav-link.active, [class*='bs-darkmode-'] .navbar-light .navbar-nav .nav-link.show, [class*='bs-darkmode-'] .navbar-light .navbar-nav .show>.nav-link{color: rgba(var(--black-rgb),.9);}
+[class*='bs-darkmode-'] .navbar-light .navbar-text{color: rgba(var(--black-rgb),.5);}
+[class*='bs-darkmode-'] .navbar-light .navbar-brand{color: rgba(var(--black-rgb),.9);}
+[class*='bs-darkmode-'] .navbar-light .navbar-toggler{
+    color: rgba(var(--black-rgb),.5);
+    border-color: rgba(var(--black-rgb),.1);
+}
+
+[class*='bs-darkmode-'] .navbar-dark .navbar-nav .nav-link{color: rgba(var(--white-rgb),.5);}
+[class*='bs-darkmode-'] .navbar-dark .navbar-nav .active>.nav-link, [class*='bs-darkmode-'] .navbar-dark .navbar-nav .nav-link.active, [class*='bs-darkmode-'] .navbar-dark .navbar-nav .nav-link.show, [class*='bs-darkmode-'] .navbar-dark .navbar-nav .show>.nav-link{color: rgba(var(--white-rgb),.9);}
+[class*='bs-darkmode-'] .navbar-dark .navbar-text{color: rgba(var(--white-rgb),.5);}
+[class*='bs-darkmode-'] .navbar-dark .navbar-brand{color: rgba(var(--white-rgb),.9);}
+[class*='bs-darkmode-'] .navbar-dark .navbar-toggler{
+    color: rgba(var(--white-rgb),.5);
+    border-color: rgba(var(--white-rgb),.1);
+}
+
+[class*='bs-darkmode-'] .nav-link.disabled{color:var(--gray);}
+
+[class*='bs-darkmode-'] .dropdown-menu{
+    color: var(--body-color);
+    background-color:var(--body-bg);
+}
+[class*='bs-darkmode-'] .dropdown-item{color: var(--body-color);}
+[class*='bs-darkmode-'] .dropdown-divider{border-color: var(--gray-200);}
+[class*='bs-darkmode-'] .dropdown-item:focus, [class*='bs-darkmode-']  .dropdown-item:hover{background-color: var(--gray-200);}
+[class*='bs-darkmode-'] .dropdown-item.active,
+[class*='bs-darkmode-'] .dropdown-item:active{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.bs-darkmode-light .nav-tabs{border-color: var(--gray-300);}
+.bs-darkmode-dark .nav-tabs{border-color: var(--gray-400);}
+[class*='bs-darkmode-'] .nav-tabs .nav-item.show .nav-link,
+[class*='bs-darkmode-'] .nav-tabs .nav-link.active{
+    color: var(--gray-700);
+    background-color:var(--body-bg);
+    border-color: var(--gray-300) var(--gray-300) var(--body-bg);
+}
+.bs-darkmode-light .nav-tabs .nav-item.show .nav-link, .bs-darkmode-light .nav-tabs .nav-link.active{border-color: var(--gray-300) var(--gray-300) var(--body-bg);}
+.bs-darkmode-dark .nav-tabs .nav-item.show .nav-link, .bs-darkmode-dark .nav-tabs .nav-link.active{border-color: var(--gray-400) var(--gray-400) var(--body-bg);}
+.bs-darkmode-light .nav-tabs .nav-link:focus, .bs-darkmode-light .nav-tabs .nav-link:hover{border-color: var(--gray-200) var(--gray-200) var(--gray-300);}
+.bs-darkmode-dark .nav-tabs .nav-link:focus, .bs-darkmode-dark .nav-tabs .nav-link:hover{border-color: var(--gray-500) var(--gray-500) var(--gray-400);}
+
+[class*='bs-darkmode-'] .nav-pills .nav-link.active,
+[class*='bs-darkmode-'] .nav-pills .show>.nav-link{
+    color: var(--white);
+    background-color: var(--primary);
+}
+

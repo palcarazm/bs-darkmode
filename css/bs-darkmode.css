@@ -618,3 +618,8 @@ a[class*='bs-darkmode-']:not(.btn):hover, [class*='bs-darkmode-'] a:not(.btn):ho
     border-color: var(--gray-400);
     background-color:var(--gray-200);
 }
+
+/* MAP BREADCRUMB COLORS */
+[class*='bs-darkmode-'] .breadcrumb, [class*='bs-darkmode-'].breadcrumb {background-color: var(--gray-200);}
+[class*='bs-darkmode-'] .breadcrumb-item.active{color: var(--gray);}
+[class*='bs-darkmode-'] .breadcrumb-item+.breadcrumb-item::before{color: var(--gray);}

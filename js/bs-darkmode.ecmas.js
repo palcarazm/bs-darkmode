@@ -1,5 +1,5 @@
 /* Copyright Notice
- * bs-darkmode v1.1.0
+ * bs-darkmode v1.1.1
  * https://palcarazm.github.io/bs-darkmode
  * @author 2022 Pablo Alcaraz Martínez (https://github.com/palcarazm)
  * @funding GitHub Sponsors

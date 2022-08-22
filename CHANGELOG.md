@@ -5,7 +5,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
-### [Full Changelog](https://github.com/palcaraz/bs-darkmode/compare/v1.1.0...HEAD)
+### [Full Changelog](https://github.com/palcaraz/bs-darkmode/compare/v1.1.1...HEAD)
+
+## [1.1.1](https://github.com/palcaraz/bs-darkmode/tree/v1.1.1) 2022-08-22
+### Fixed
+* fix: Component render out of the root element by @palcarazm in https://github.com/palcarazm/bs-darkmode/pull/13
+* fix: Jumbotron style colors are not override (#15) by @palcarazm in https://github.com/palcarazm/bs-darkmode/pull/17
+* fix: Cards style colors are not override (#14) by @palcarazm in https://github.com/palcarazm/bs-darkmode/pull/18
+* fix: Table styles colors are not override (#11) by @palcarazm in https://github.com/palcarazm/bs-darkmode/pull/21
+* fix: Form and input group style colors are not override (#16) by @palcarazm in https://github.com/palcarazm/bs-darkmode/pull/24
+* fix: Breadcrumb style colors are not override (#22) by @palcarazm in https://github.com/palcarazm/bs-darkmode/pull/25
+* fix: Navbar and Navs style colors are not override (#23) by @palcarazm in https://github.com/palcarazm/bs-darkmode/pull/26
+### [Full Changelog](https://github.com/palcarazm/bs-darkmode/compare/v1.1.0...v1.1.1)
 
 ## [1.1.0](https://github.com/palcaraz/bs-darkmode/tree/v1.1.0) 2022-08-13
 ### Added

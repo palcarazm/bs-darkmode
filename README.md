@@ -56,14 +56,14 @@ Branch | Bootstrap Support | Last Release
 [![JSDelivr Badge](https://img.shields.io/jsdelivr/npm/hm/bs-darkmode?color=success&label=hits&logo=jsdelivr&logoColor=white)](https://www.jsdelivr.com/package/npm/bs-darkmode)
 ### jQuery Interface
 ```html
-<link href="https://cdn.jsdelivr.net/npm/bs-darkmode@1.0.0/css/bs-darkmode.min.css" rel="stylesheet">  
-<script src="https://cdn.jsdelivr.net/npm/bs-darkmode@1.0.0/js/bs-darkmode.jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bs-darkmode@1.1.1/css/bs-darkmode.min.css" rel="stylesheet">  
+<script src="https://cdn.jsdelivr.net/npm/bs-darkmode@1.1.1/js/bs-darkmode.jquery.min.js"></script>
 ```
 
 ### ECMAS Interface
 ```html
-<link href="https://cdn.jsdelivr.net/npm/bs-darkmode@1.0.0/css/bs-darkmode.min.css" rel="stylesheet">  
-<script src="https://cdn.jsdelivr.net/npm/bs-darkmode@1.0.0/js/bs-darkmode.ecmas.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bs-darkmode@1.1.1/css/bs-darkmode.min.css" rel="stylesheet">  
+<script src="https://cdn.jsdelivr.net/npm/bs-darkmode@1.1.1/js/bs-darkmode.ecmas.min.js"></script>
 ```
 
 ## Download
@@ -72,12 +72,12 @@ Branch | Bootstrap Support | Last Release
 ## NPM
 [![NPM Badge](https://img.shields.io/npm/dm/bs-darkmode?logo=npm&color=success)](https://www.npmjs.com/package/bs-darkmode)
 ```ksh
-npm install bs-darkmode
+npm install bs-darkmode@1.1.1
 ```
 
 ## Yarn
 ```ksh
-yarn add bs-darkmode
+yarn add bs-darkmode@1.1.1
 ```
 
 # Usage

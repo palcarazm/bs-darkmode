@@ -4,7 +4,9 @@
 <h3 class="text-secondary">Event Propagation</h3>
 <p>Note All events are propagated to and from the element to the darkmode toggle.You should listen to events from the HTML element directly rather than look for custom events.</p>
 <div class="example skip">
-    <button class="btn btn-primary" id="darkmodeEvent" data-plugin="bsdarkmode"></button>
+    <div id="event-propagation-example" class="p-3">
+        <button class="btn btn-primary" id="darkmodeEvent" data-plugin="bsdarkmode" data-root="#event-propagation-example"></button>
+    </div>
         <script>
           $(function() {
             $('#darkmodeEvent').change(function() {
@@ -14,7 +16,9 @@
         </script>
     <div><code id="console-event" class="badge bg-secondary w-100 text-start font-monospace">> </code></div>
 </div>
-<pre><code class="highlight language-html">&lt;button class="btn btn-primary" id="darkmodeEvent" data-plugin="bsdarkmode"&gt;&lt;/button&gt;
+<pre><code class="highlight language-html">&lt;div id="event-propagation-example"&gt;
+    &lt;button class="btn btn-primary" id="darkmodeEvent" data-plugin="bsdarkmode" data-root="#event-propagation-example"&gt;&lt;/button&gt;
+&lt;/div&gt;
 &lt;script&gt;
     $(function () {
         $('#darkmodeEvent').change(function () {
@@ -26,11 +30,13 @@
 <h3 class="text-secondary">Stopping Event Propagation</h3>
 <p>Passing <code>true</code> to the light, dark and toggle methods will enable the silent option to prevent the control from propagating the change event in cases where you want to update the controls light/dark state, but do not want to fire the onChange event.</p>
 <div class="example skip">
-    <button class="btn btn-primary" data-plugin="bsdarkmode" id="darkmodeChange"></button>
-    <button class="btn btn-success" onclick="$('#darkmodeChange').bsDarkmode('light',true)" >Light by API (silent)</button>
-    <button class="btn btn-success" onclick="$('#darkmodeChange').bsDarkmode('dark',true)">Dark by API (silent)</button>
-    <button class="btn btn-warning" onclick="$('#darkmodeChange').bsDarkmode('light')">Light by API (not silent)</button>
-    <button class="btn btn-warning" onclick="$('#darkmodeChange').bsDarkmode('dark')">Dark by API (not silent)</button>
+    <div id="event-stop-example" class="p-3">
+        <button class="btn btn-primary" data-plugin="bsdarkmode" id="darkmodeChange" data-root="#event-stop-example"></button>
+        <button class="btn btn-success" onclick="$('#darkmodeChange').bsDarkmode('light',true)" >Light by API (silent)</button>
+        <button class="btn btn-success" onclick="$('#darkmodeChange').bsDarkmode('dark',true)">Dark by API (silent)</button>
+        <button class="btn btn-warning" onclick="$('#darkmodeChange').bsDarkmode('light')">Light by API (not silent)</button>
+        <button class="btn btn-warning" onclick="$('#darkmodeChange').bsDarkmode('dark')">Dark by API (not silent)</button>
+    </div>
     <script>
         $(function() {
         $('#darkmodeChange').change(function() {
@@ -40,11 +46,13 @@
     </script>
     <div><code id="chgConsole" class="badge bg-secondary w-100 text-start font-monospace">> </code></div>
 </div>
-<pre><code class="highlight language-html">&lt;button class="btn btn-primary" data-plugin="bsdarkmode" id="darkmodeChange"&gt;&lt;/button&gt;
-&lt;button class="btn btn-success" onclick="$('#darkmodeChange').bsDarkmode('light',true)" &gt;Light by API (silent)&lt;/button&gt;
-&lt;button class="btn btn-success" onclick="$('#darkmodeChange').bsDarkmode('dark',true)"&gt;Dark by API (silent)&lt;/button&gt;
-&lt;button class="btn btn-warning" onclick="$('#darkmodeChange').bsDarkmode('light')"&gt;Light by API (not silent)&lt;/button&gt;
-&lt;button class="btn btn-warning" onclick="$('#darkmodeChange').bsDarkmode('dark')"&gt;Dark by API (not silent)&lt;/button&gt;
+<pre><code class="highlight language-html">&lt;div id="event-stop-example"&gt;
+    &lt;button class="btn btn-primary" data-plugin="bsdarkmode" id="darkmodeChange" data-root="#event-stop-example"&gt;&lt;/button&gt;
+    &lt;button class="btn btn-success" onclick="$('#darkmodeChange').bsDarkmode('light',true)" &gt;Light by API (silent)&lt;/button&gt;
+    &lt;button class="btn btn-success" onclick="$('#darkmodeChange').bsDarkmode('dark',true)"&gt;Dark by API (silent)&lt;/button&gt;
+    &lt;button class="btn btn-warning" onclick="$('#darkmodeChange').bsDarkmode('light')"&gt;Light by API (not silent)&lt;/button&gt;
+    &lt;button class="btn btn-warning" onclick="$('#darkmodeChange').bsDarkmode('dark')"&gt;Dark by API (not silent)&lt;/button&gt;
+&lt;/div&gt;
 &lt;script&gt;
     $(function() {
     $('#darkmodeChange').change(function() {
@@ -53,5 +61,5 @@
     })
 &lt;/script&gt;</code></pre>
 <div class="alert alert-info position-relative" role="alert">
-    <i class="fas fa-info-circle"></i> For ECMAS JavaScript replace <code>$('#darkmodeChange')...</code> with <code>document.querySelector('#darkmodeChange')...</code>
+    <i class="fas fa-info-circle" aria-hidden="true"></i> For ECMAS JavaScript replace <code>$('#darkmodeChange')...</code> with <code>document.querySelector('#darkmodeChange')...</code>
 </div>

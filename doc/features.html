@@ -7,14 +7,18 @@
     <small>The user preferred color scheme dark is prioritary.</small>
 </p>
 <div class="example" code-lang="html">
-    <button class="btn btn-primary" data-plugin="bsdarkmode" data-state="light"></button>
-    <button class="btn btn-primary" data-plugin="bsdarkmode"data-state="dark"></button>
+    <div id="state-light-example" class="p-3">
+        <button class="btn btn-primary" data-plugin="bsdarkmode" data-state="light" data-root="#state-light-example"></button>
+    </div>
+    <div id="state-dark-example" class="p-3">
+        <button class="btn btn-primary" data-plugin="bsdarkmode"data-state="dark" data-root="#state-dark-example"></button>
+    </div>
 </div>
 
 <h3 class="text-secondary">Custom Root Element</h3>
 <p>Bootstrap Darkmode root element can be set by <code>data-root</code> attribute.</p>
 <div class="example" code-lang="html">
-    <div id="root-example">
+    <div id="root-example" class="p-3">
         <button class="btn btn-primary" data-plugin="bsdarkmode" data-root="#root-example"></button>
     </div>
 </div>
@@ -22,11 +26,18 @@
 <h3 class="text-secondary">Custom Label</h3>
 <p>Bootstrap Darkmode light and dark label can be set by <code>data-lightlabel</code> and <code>data-darklabel</code> attributes.</p>
 <div class="example" code-lang="html">
-    <button class="btn btn-primary" data-plugin="bsdarkmode" data-lightlabel="LIGHTS ON" data-darklabel="LIGHTS OFF"></button>
+    <div id="label-example" class="p-3">
+        <button class="btn btn-primary" data-plugin="bsdarkmode" data-lightlabel="LIGHTS ON" data-darklabel="LIGHTS OFF" data-root="#label-example"></button>
+    </div>
 </div>
 
 <h3 class="text-secondary">Custom Theme</h3>
 <p>Bootstrap Darkmode css Theme can be set by <code>data-lightvars</code> and <code>data-darkvars</code> attributes. <a href="#css-vars-to-change">Vars</a> are defined in a JSON object.</p>
-<div class="example" code-lang="html">
-    <button class="btn btn-primary" data-plugin="bsdarkmode" data-lightlabel="LIGHTS ON" data-darklabel="LIGHTS OFF"></button>
+<div class="example skip" code-lang="html">
+    <div id="theme-example" class="p-3">
+        <button class="btn btn-primary" data-plugin="bsdarkmode" data-lightlabel="LIGHTS ON" data-darklabel="LIGHTS OFF" data-root="#theme-example" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'></button>
+    </div>
 </div>
+<pre><code class="highlight language-html">&lt;div id="theme-example"&gt;
+    &lt;button class="btn btn-primary" data-plugin="bsdarkmode" data-lightlabel="LIGHTS ON" data-darklabel="LIGHTS OFF" data-root="#theme-example" data-lightvars='{"primary":"#FF0000","secondary":"#00FF00"}' data-darkvars='{"primary":"#0000FF","secondary":"#FFFF00"}'&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>

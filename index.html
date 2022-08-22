@@ -41,8 +41,8 @@
         crossorigin="anonymous"></script>
     <!--<script src="js/bs-darkmode.jquery.js"></script>
 	<link rel="stylesheet" href="css/bs-darkmode.css">-->
-    <script src="https://cdn.jsdelivr.net/npm/bs-darkmode@1.1.0/js/bs-darkmode.jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bs-darkmode@1.1.0/css/bs-darkmode.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bs-darkmode@1.1.1/js/bs-darkmode.jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bs-darkmode@1.1.1/css/bs-darkmode.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css">
     <link rel="stylesheet" href="src/version_styles.css">
     <!-- Google tag (gtag.js) -->
@@ -75,7 +75,7 @@
     <section id="notice" class="container my-5" data="doc/notice.html"></section>
     <main class="container">
         <div class="row g5">
-            <div class="col-md-3 col-lg-2">
+            <div class="col-12 col-md-3 col-lg-2">
                 <div class="position-sticky" style="top: 0rem;">
                     <div class="d-none d-md-block position-relative mx-auto py-5 img-toggle">
                         <img class="d-block mx-auto position-absolute top-50 start-50 translate-middle" src="img/logo_on.png"
@@ -83,15 +83,26 @@
                         <img class="d-block mx-auto position-absolute top-50 start-50 translate-middle invisible"
                             src="img/logo_off.png" alt="Bootstrap Darkmode" style="max-width: 100%;">
                     </div>
-                    <div class="input-group input-group-sm mb-2">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Version</span>
+                    <nav class="navbar navbar-expand-md navbar-light flex-md-column"  aria-label="Site menu">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <button class="btn border mb-md-2" data-plugin="bsdarkmode"></button>
+                        <form class="form-inline my-2 my-md-0 mb-md-2">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">Version</span>
+                                </div>
+                                <select class="custom-select form-control" id="version">
+                                    <option selected value="#">v1.X.X</option>
+                                </select>
+                            </div>
+                        </form>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <nav id="toc" data-toggle="toc" aria-label="Table of contents"></nav>
                         </div>
-                        <select class="custom-select form-control" id="version">
-                            <option selected value="#">v1.X.X</option>
-                          </select>
-                    </div>
-                    <nav id="toc" data-toggle="toc" class="d-none d-md-block"></nav>
+                    </nav>
                     <div class="d-none d-md-flex flex-column align-items-center">
                         <div class="mt-3">
                             <a href="https://openbase.com/js/bs-darkmode?utm_source=embedded&utm_medium=badge&utm_campaign=rating-badge&utm_term=js/bs-darkmode" target="_blank" rel="noopener noreferrer" title="Rate in Open Base">
@@ -100,7 +111,7 @@
                         </div>
                         <div class="mt-1">
                             <a href="https://github.com/sponsors/palcarazm" title="Sponsors">
-                                <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white"/>
+                                <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="GitHub Sponsors"/>
                             </a>
                         </div>
                         <div class="mt-1">
@@ -139,7 +150,7 @@
                 </div>
                 <div class="d-md-none d-block mb-2 mb-md-0">
                     <a href="https://github.com/sponsors/palcarazm" title="Sponsors">
-                        <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white"/>
+                        <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="GitHub Sponsors"/>
                     </a>
                 </div>
                 <div class="d-md-none d-block mb-2 mb-md-0">

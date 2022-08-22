@@ -1,6 +1,6 @@
 {
   "name": "bs-darkmode",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Bootstrap Darkmode is a bootstrap plugin/widget that supports toggling between light and dark theme",
   "main": "js/bs-darkmode.jquery.min.js",
   "files": [

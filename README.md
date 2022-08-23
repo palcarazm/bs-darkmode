@@ -127,14 +127,15 @@ EX: Initialize id `darkmodeToggle` with a single line of JavaScript.
 </script>
 ```
 
-Name        |Type   |Default |Description                 
-------------|-------|--------|------------
-`state`     |boolean|true    |Initial state (For data-state use `light` or `dark`). The user preferred color scheme dark is prioritary.
-`root`      |string |":root" |Root element to apply CSS vars
-`lightlabel`|html   |sun svg |Element inner HTML for light mode
-`darklabel` |html   |moon svg|Element inner HTML for dark mode
-`lightvars` |string |"{}"    |JSON object with CSS vars for light mode
-`darkvars`  |string |"{}"    |JSON object with CSS vars for dark mode
+Name          |Type   |Default |Description                 
+--------------|-------|--------|------------
+`state`       |boolean|true    |Initial state (For data-state use `light` or `dark`). The user preferred color scheme dark is prioritary.
+`root`        |string |":root" |Root element to apply CSS vars
+`allowsCookie`|boolean|false   |Cookie authorization status
+`lightlabel`  |html   |sun svg |Element inner HTML for light mode
+`darklabel`   |html   |moon svg|Element inner HTML for dark mode
+`lightvars`   |string |"{}"    |JSON object with CSS vars for light mode
+`darkvars`    |string |"{}"    |JSON object with CSS vars for dark mode
 
 ## CSS Vars to change
 The following CSS Vars that can be changed form `lightvars` and `darkvars` attributes.
@@ -184,12 +185,13 @@ Methods can be used to control toggles directly.
 <button class="btn btn-primary" id="darkmodeToggle"></button>
 ```
 
-Method    |Example                                     |Description
-----------|--------------------------------------------|------------
-initialize| `$('#darkmodeToggle').bsDarkmode()`        |Initializes the darkmode plugin with options
-light     | `$('#darkmodeToggle').bsDarkmode('light')` |Sets the darkmode toggle to 'light' state
-dark      | `$('#darkmodeToggle').bsDarkmode('dark')`  |Sets the darkmode toggle to 'dark' state
-toggle    | `$('#darkmodeToggle').bsDarkmode('toggle')`|Toggles the state of the darkmode toggle light/dark
+Method               |Example                                                            |Description
+---------------------|-------------------------------------------------------------------|------------
+initialize           | `$('#darkmodeToggle').bsDarkmode()`                               |Initializes the darkmode plugin with options
+light                | `$('#darkmodeToggle').bsDarkmode('light')`                        |Sets the darkmode toggle to 'light' state
+dark                 | `$('#darkmodeToggle').bsDarkmode('dark')`                         |Sets the darkmode toggle to 'dark' state
+toggle               | `$('#darkmodeToggle').bsDarkmode('toggle')`                       |Toggles the state of the darkmode toggle light/dark
+setCookieAutorization| `$('#darkmodeToggle').bsDarkmode('setCookieAutorization', status)`|Sets the Cookie authorization status. Status can be `true` or `false`
 
 # Events
 

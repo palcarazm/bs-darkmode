@@ -36,7 +36,7 @@
     Darkmode.prototype.COOKIE_NAME = 'bs-darkmode-color-scheme';
 
     Darkmode.prototype.defaults = function() {
-        const allowsCookie = this.$element.attr('data-allowsCookie') || Darkmode.DEFAULTS.allowsCookie;
+        const allowsCookie = this.$element.is('[allowsCookie]') || Darkmode.DEFAULTS.allowsCookie;
         const COLORSCHEME = getColorScheme(this, allowsCookie);
         return {
             state: COLORSCHEME === null ? Darkmode.DEFAULTS.state : COLORSCHEME,

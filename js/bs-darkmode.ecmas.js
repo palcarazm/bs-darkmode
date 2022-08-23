@@ -33,7 +33,7 @@
 			this.element = element;
 
 			// B: Set options
-            const allowsCookie = this.element.getAttribute('data-allowsCookie') || options.allowsCookie || DEFAULTS.allowsCookie
+            const allowsCookie = this.element.hasAttribute('allowsCookie') || options.allowsCookie || DEFAULTS.allowsCookie
             const COLORSCHEME = this.#getColorScheme(allowsCookie);
 			this.options = {
 				state: COLORSCHEME === null ? DEFAULTS.state : COLORSCHEME,

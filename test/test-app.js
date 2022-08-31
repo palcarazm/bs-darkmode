@@ -56,6 +56,25 @@ $( function () {
             )
     });
 
+    $("section[data]").each(function (_index, section) {
+        let request = new XMLHttpRequest();
+        request.open("GET", $(section).attr("data"), true);
+        request.send(null);
+        request.onreadystatechange = function () {
+          if (request.readyState === 4 && request.status === 200) {
+            $(section).html(request.responseText);
+          }
+          if (request.readyState === 4 && request.status != 200) {
+            $(section).html(
+              $("<div></div>")
+                .addClass("alert alert-warning")
+                .attr("role", "alert")
+                .html("Ouups! We can't load this section.")
+            );
+          }
+        };
+      });
+
     /*TESTCASES.forEach((testCase)=>{
         $('#test-selector').append(
             $('<button type="button">')

@@ -104,6 +104,12 @@ $('#darkmodeToggle').bsDarkmode({
                 <td>Root element to apply CSS vars</td>
             </tr>
             <tr>
+                <td><code>allowsCookie</code></td>
+                <td>boolean</td>
+                <td><code class="text-nowrap">false</code></td>
+                <td>Cookie authorization status</td>
+            </tr>
+            <tr>
                 <td><code>lightlabel</code></td>
                 <td>html</td>
                 <td><code>sun svg</code></td>
@@ -418,7 +424,7 @@ $('#darkmodeToggle').bsDarkmode({
 <p>Methods can be used to control toggles directly.</p>
 <div class="example" code-lang="html">
     <div id="api-methods-example" class="p-3">
-        <button class="btn btn-primary" id="darkmodeMethods" data-root="#api-methods-example"></button>
+        <button class="btn btn-primary" id="demo" data-root="#api-methods-example"></button>
     </div>
 </div>
 <div class="table-responsive">
@@ -435,35 +441,41 @@ $('#darkmodeToggle').bsDarkmode({
         <tbody>
             <tr>
                 <td><em>initialize</em></td>
-                <td><code>$('#darkmodeMethods').bsDarkmode()</code></td>
+                <td><code>$('#demo').bsDarkmode()</code></td>
                 <td>Initializes the darkmode plugin with options</td>
                 <td><button class="btn btn-outline-dark btn-sm w-100"
-                        onclick="$('#darkmodeMethods').bsDarkmode()">Initialize</button></td>
+                        onclick="$('#demo').bsDarkmode()">Initialize</button></td>
             </tr>
             <tr>
                 <td>light</td>
-                <td><code>$('#darkmodeMethods').bsDarkmode('light')</code></td>
+                <td><code>$('#demo').bsDarkmode('light')</code></td>
                 <td>Sets the darkmode toggle to 'light' state</td>
                 <td><button class="btn btn-outline-dark btn-sm w-100"
-                        onclick="$('#darkmodeMethods').bsDarkmode('light')">Light</button></td>
+                        onclick="$('#demo').bsDarkmode('light')">Light</button></td>
             </tr>
             <tr>
                 <td>dark</td>
-                <td><code>$('#darkmodeMethods').bsDarkmode('dark')</code></td>
+                <td><code>$('#demo').bsDarkmode('dark')</code></td>
                 <td>Sets the darkmode toggle to 'dark' state</td>
-                <td><button class="btn btn-outline-dark btn-sm w-100" onclick="$('#darkmodeMethods').bsDarkmode('dark')">Dark</button></td>
+                <td><button class="btn btn-outline-dark btn-sm w-100" onclick="$('#demo').bsDarkmode('dark')">Dark</button></td>
             </tr>
             <tr>
                 <td>toggle</td>
-                <td><code>$('#darkmodeMethods').bsDarkmode('toggle')</code></td>
+                <td><code>$('#demo').bsDarkmode('toggle')</code></td>
                 <td>Toggles the state of the darkmode toggle light/dark</td>
                 <td><button class="btn btn-outline-dark btn-sm w-100"
-                        onclick="$('#darkmodeMethods').bsDarkmode('toggle')">Toggle</button></td>
+                        onclick="$('#demo').bsDarkmode('toggle')">Toggle</button></td>
+            </tr>
+            <tr>
+                <td>setCookieAutorization</td>
+                <td><code>$('#demo').bsDarkmode( 'setCookieAutorization', status)</code></td>
+                <td>Sets the Cookie authorization status. Status can be <code>true</code> or <code>false</code></td>
+                <td></td>
             </tr>
         </tbody>
     </table>
 </div>
 <div class="alert alert-info position-relative" role="alert">
-    <i class="fas fa-info-circle" aria-hidden="true"></i> For ECMAS JavaScript replace <code>$('#toggle-demo')...</code> with
-    <code>document.querySelector('#toggle-demo')...</code>
+    <i class="fas fa-info-circle" aria-hidden="true"></i> For ECMAS JavaScript replace <code>$('#demo')...</code> with
+    <code>document.querySelector('#demo')...</code>
 </div>

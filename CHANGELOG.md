@@ -5,7 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
-### [Full Changelog](https://github.com/palcaraz/bs-darkmode/compare/v1.1.1...HEAD)
+### [Full Changelog](https://github.com/palcaraz/bs-darkmode/compare/v1.2.0...HEAD)
+
+## [1.2.0](https://github.com/palcaraz/bs-darkmode/tree/v1.2.0) 2022-08-31
+### Added
+* feat: Set preferred color schema in a cookie (#8) by @palcarazm in https://github.com/palcarazm/bs-darkmode/pull/29
+### Fixed
+* fix: List Group style colors are not override (#31) by @palcarazm in https://github.com/palcarazm/bs-darkmode/pull/33
+### [Full Changelog](https://github.com/palcarazm/bs-darkmode/compare/v1.1.1...v1.2.0)
 
 ## [1.1.1](https://github.com/palcaraz/bs-darkmode/tree/v1.1.1) 2022-08-22
 ### Fixed

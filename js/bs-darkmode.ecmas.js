@@ -80,20 +80,20 @@
             const target = document.querySelector(this.options.root);
             target.removeAttribute("style");
             Object.entries(cssvars).forEach(([key, value]) => {
-                target.style.setProperty("--"+key,value);
+                target.style.setProperty("--bs-"+key,value);
             });
 
             // 3: Add HSL theme Colors
-            const THEMECOLORS = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'white', 'black'];
+            const THEMECOLORS = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'white', 'black', 'body-color', 'body-bg'];
             let hsl, rgb;
             Object.entries(cssvars).forEach(([key, value]) => {
                 if(THEMECOLORS.includes(key)){
                     rgb = this.#hexToRGB(value);
                     hsl = this.#hexToHSL(value);
-                    target.style.setProperty("--"+key+"-h",hsl.h+'');
-                    target.style.setProperty("--"+key+"-s",hsl.s+'%');
-                    target.style.setProperty("--"+key+"-l",hsl.l+'%');
-                    target.style.setProperty("--"+key+"-rgb",rgb.r+','+rgb.g+','+rgb.b);
+                    target.style.setProperty("--bs-"+key+"-h",hsl.h+'');
+                    target.style.setProperty("--bs-"+key+"-s",hsl.s+'%');
+                    target.style.setProperty("--bs-"+key+"-l",hsl.l+'%');
+                    target.style.setProperty("--bs-"+key+"-rgb",rgb.r+','+rgb.g+','+rgb.b);
                 }
             });
 

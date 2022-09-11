@@ -38,8 +38,6 @@
   },
   "homepage": "https://palcarazm.github.io/bs-darkmode",
   "devDependencies": {
-    "cypress": "^10.3.0",
-    "cypress-plugin-tab": "^1.0.5",
     "doctoc": "^2.2.0",
     "grunt": "^1.5.3",
     "grunt-banner": "^0.6.0",
@@ -48,7 +46,7 @@
     "grunt-contrib-uglify": "^5.2.1"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^5.0.0"
   },
   "optionalDependencies": {
     "jquery": "^3.6.0"

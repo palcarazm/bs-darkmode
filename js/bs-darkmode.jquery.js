@@ -1,5 +1,5 @@
 /* Copyright Notice
- * bs-darkmode v1.2.0
+ * bs-darkmode v2.0.0
  * https://palcarazm.github.io/bs-darkmode
  * @author 2022 Pablo Alcaraz Martínez (https://github.com/palcarazm)
  * @funding GitHub Sponsors
@@ -80,20 +80,20 @@
         const target = $(this.options.root);
         target.attr("style","");
         Object.entries(cssvars).forEach(([key, value]) => {
-            target.css("--"+key,value);
+            target.css("--bs-"+key,value);
         });
 
         // 3: Add HSL theme Colors
-        const THEMECOLORS = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'white', 'black'];
+        const THEMECOLORS = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'white', 'black', 'body-color', 'body-bg'];
         let hsl, rgb;
         Object.entries(cssvars).forEach(([key, value]) => {
             if(THEMECOLORS.includes(key)){
                 rgb = hexToRGB(value);
                 hsl = hexToHSL(value);
-                target.css("--"+key+"-h",hsl.h+'');
-                target.css("--"+key+"-s",hsl.s+'%');
-                target.css("--"+key+"-l",hsl.l+'%');
-                target.css("--"+key+"-rgb",rgb.r+','+rgb.g+','+rgb.b);
+                target.css("--bs-"+key+"-h",hsl.h+'');
+                target.css("--bs-"+key+"-s",hsl.s+'%');
+                target.css("--bs-"+key+"-l",hsl.l+'%');
+                target.css("--bs-"+key+"-rgb",rgb.r+','+rgb.g+','+rgb.b);
             }
         });
 

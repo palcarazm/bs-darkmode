@@ -1,5 +1,5 @@
 [![GitHub license](https://img.shields.io/github/license/palcarazm/bs-darkmode.svg)](https://github.com/palcarazm/bs-darkmode/blob/master/LICENSE)
-[![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/master?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
+[![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/v1.X.X?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
 [![JSDelivr Badge](https://img.shields.io/jsdelivr/npm/hm/bs-darkmode?color=success&label=hits&logo=jsdelivr&logoColor=white)](https://www.jsdelivr.com/package/npm/bs-darkmode)
 [![NPM Badge](https://img.shields.io/npm/dm/bs-darkmode?logo=npm&color=success)](https://www.npmjs.com/package/bs-darkmode)
 [![Maintenance](https://img.shields.io/badge/maintained%3F-yes-success.svg)](https://github.com/palcarazm/bs-darkmode/graphs/contributors)
@@ -15,7 +15,8 @@
 #### Library Distributions
 Branch | Bootstrap Support | Last Release
 ---|---|---
-[bs-darkmode v1.X.X](https://github.com/palcarazm/bs-darkmode/)     | [![Bootstrap 4](https://img.shields.io/static/v1?label=bootstrap&message=v4.X.X&color=informational&logo=bootstrap&logoColor=white)](https://getbootstrap.com/docs/4.0) | [![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/master?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
+[bs-darkmode v2.X.X](https://github.com/palcarazm/bs-darkmode/tree/v2.X.X)     | [![Bootstrap 5](https://img.shields.io/static/v1?label=bootstrap&message=v5.X.X&color=informational&logo=bootstrap&logoColor=white)](https://getbootstrap.com/docs/5.0) | [![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/v2.X.X?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
+[bs-darkmode v1.X.X](https://github.com/palcarazm/bs-darkmode/tree/v1.X.X)     | [![Bootstrap 4](https://img.shields.io/static/v1?label=bootstrap&message=v4.X.X&color=informational&logo=bootstrap&logoColor=white)](https://getbootstrap.com/docs/4.0) | [![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/v1.X.X?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
 # Demos
 **Demos and API Docs:** https://palcarazm.github.io/bs-darkmode/  
 
@@ -67,7 +68,7 @@ Branch | Bootstrap Support | Last Release
 ```
 
 ## Download
-[![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/master?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
+[![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/v1.X.X?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
 
 ## NPM
 [![NPM Badge](https://img.shields.io/npm/dm/bs-darkmode?logo=npm&color=success)](https://www.npmjs.com/package/bs-darkmode)

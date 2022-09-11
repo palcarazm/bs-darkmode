@@ -68,7 +68,7 @@ Branch | Bootstrap Support | Last Release
 ```
 
 ## Download
-[![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/master?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
+[![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/v2.X.X?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
 
 ## NPM
 [![NPM Badge](https://img.shields.io/npm/dm/bs-darkmode?logo=npm&color=success)](https://www.npmjs.com/package/bs-darkmode)

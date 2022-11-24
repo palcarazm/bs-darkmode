@@ -1,4 +1,4 @@
-const ENV = $('#env-data')
+const ENV = $("#env-data");
 /*const TESTCASES =[
     {name: 'status'         , code:'status'},
     {name: 'tristate'       , code:'tristate'},
@@ -15,7 +15,7 @@ const ENV = $('#env-data')
     {name: 'API methods' , code:'api-methods'}
 ];*/
 function appStartup(test) {
-    /*MAIN.html('');
+  /*MAIN.html('');
     DESCRIPTION.html('');
     switch (test) {
     
@@ -44,38 +44,40 @@ function appStartup(test) {
     }
     }, 500);*/
 }
-$( function () {
-    $.getJSON('../package-lock.json', function(data) {
-        Bootstrap = data.packages["node_modules/bootstrap"].version;
-        plugin = data.version;
-        ENV.html('');
-        ENV.append(
-            $("<div>").append($("<code>").html("Bootstrap v"+Bootstrap)),
-            $("<div>").append($("<code>").html("bs-darkmode v"+plugin)),
-            $("<div>").append($("<code>").html("Interface "+INTERFACE))
-            )
-    });
+$(function () {
+  $.getJSON("../package-lock.json", function (data) {
+    let Bootstrap = DOMPurify.sanitize(
+      data.packages["node_modules/bootstrap"].version
+    );
+    let plugin = DOMPurify.sanitize(data.version);
+    ENV.html("");
+    ENV.append(
+      $("<div>").append($("<code>").html("Bootstrap v" + Bootstrap)),
+      $("<div>").append($("<code>").html("bs-darkmode v" + plugin)),
+      $("<div>").append($("<code>").html("Interface " + INTERFACE))
+    );
+  });
 
-    $("section[data]").each(function (_index, section) {
-        let request = new XMLHttpRequest();
-        request.open("GET", $(section).attr("data"), true);
-        request.send(null);
-        request.onreadystatechange = function () {
-          if (request.readyState === 4 && request.status === 200) {
-            $(section).html(request.responseText);
-          }
-          if (request.readyState === 4 && request.status != 200) {
-            $(section).html(
-              $("<div></div>")
-                .addClass("alert alert-warning")
-                .attr("role", "alert")
-                .html("Ouups! We can't load this section.")
-            );
-          }
-        };
-      });
+  $("section[data]").each(function (_index, section) {
+    let request = new XMLHttpRequest();
+    request.open("GET", $(section).attr("data"), true);
+    request.send(null);
+    request.onreadystatechange = function () {
+      if (request.readyState === 4 && request.status === 200) {
+        $(section).html(DOMPurify.sanitize(request.responseText));
+      }
+      if (request.readyState === 4 && request.status != 200) {
+        $(section).html(
+          $("<div></div>")
+            .addClass("alert alert-warning")
+            .attr("role", "alert")
+            .html("Ouups! We can't load this section.")
+        );
+      }
+    };
+  });
 
-    /*TESTCASES.forEach((testCase)=>{
+  /*TESTCASES.forEach((testCase)=>{
         $('#test-selector').append(
             $('<button type="button">')
                 .addClass("btn btn-secondary text-capitalize")

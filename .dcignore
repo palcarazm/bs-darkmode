@@ -1,0 +1,15 @@
+# Hidden directories
+.*/
+
+# Test
+debug/
+
+# Windows
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Node
+logs
+node_modules/

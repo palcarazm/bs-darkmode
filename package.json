@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.0",
-    "dompurify": "^2.4.1"
+    "dompurify": "^3.0.0"
   },
   "optionalDependencies": {
     "jquery": "^3.6.0"

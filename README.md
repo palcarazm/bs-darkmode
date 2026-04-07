@@ -2,33 +2,30 @@
 [![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/v2.X.X?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
 [![JSDelivr Badge](https://img.shields.io/jsdelivr/npm/hm/bs-darkmode?color=success&label=hits&logo=jsdelivr&logoColor=white)](https://www.jsdelivr.com/package/npm/bs-darkmode)
 [![NPM Badge](https://img.shields.io/npm/dm/bs-darkmode?logo=npm&color=success)](https://www.npmjs.com/package/bs-darkmode)
-[![Maintenance](https://img.shields.io/badge/maintained%3F-yes-success.svg)](https://github.com/palcarazm/bs-darkmode/graphs/contributors)
 [![Funding](https://img.shields.io/badge/sponsor-30363D?style=flat&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/palcarazm)
-[![Rate this package](https://badges.openbase.com/js/rating/bs-darkmode.svg?)](https://openbase.com/js/bs-darkmode?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
 
 # Bootstrap Darkmode
 
 **Bootstrap Darkmode** is a bootstrap plugin/widget that supports toggling between light and dark theme.
 
-***
+---
+> [!IMPORTANT]
+> # 📢 Deprecation Notice: `bs-darkmode`
+> After careful consideration, I have decided to deprecate the `bs-darkmode` npm package. This package will no longer be maintained.
+> 
+> ## Reasons for deprecation
+> - **Bootstrap 5.3.0+** natively supports dark mode out of the box.
+> - The official [`bs-darkmode-toggle`](https://www.npmjs.com/package/bs-darkmode-toggle) package has reached its **1.0.0 stable release**, offering the same toggle functionality **without overriding Bootstrap styles**.
+> - **Bootstrap 4.x** (which `bs-darkmode` heavily relied on) is no longer maintained.
+> 
+> ## Recommended migration path
+> 1. **Update to Bootstrap 5.3.x** if you haven't already.
+> 2. **Replace `bs-darkmode` with [`bs-darkmode-toggle`](https://www.npmjs.com/package/bs-darkmode-toggle)** for the dark mode toggle feature.
+---
 
-#### Library Distributions
-Branch | Bootstrap Support | Last Release
----|---|---
-[bs-darkmode v2.X.X](https://github.com/palcarazm/bs-darkmode/tree/v2.X.X)     | [![Bootstrap 5](https://img.shields.io/static/v1?label=bootstrap&message=v5.X.X&color=informational&logo=bootstrap&logoColor=white)](https://getbootstrap.com/docs/5.0) | [![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/v2.X.X?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
-[bs-darkmode v1.X.X](https://github.com/palcarazm/bs-darkmode/tree/v1.X.X)     | [![Bootstrap 4](https://img.shields.io/static/v1?label=bootstrap&message=v4.X.X&color=informational&logo=bootstrap&logoColor=white)](https://getbootstrap.com/docs/4.0) | [![Latest release](https://img.shields.io/github/package-json/v/palcarazm/bs-darkmode/v1.X.X?logo=github)](https://github.com/palcarazm/bs-darkmode/releases)
-# Demos
-**Demos and API Docs:** https://palcarazm.github.io/bs-darkmode/  
+Thank you to everyone who used and supported `bs-darkmode`. I strongly encourage you to migrate to the modern, maintained alternatives listed above.
 
-# Related Bootstrap Puglins
-<div align="center">
-  <a href="https://github.com/palcarazm/bootstrap5-toggle" title="Boostrap Toggle"
-    ><img
-      src="https://github-readme-stats.vercel.app/api/pin/?username=palcarazm&repo=bootstrap5-toggle&border_radius=10&show_owner=true"
-  /></a>
-</div>
-
-***
+---
 
 <!-- To update TOC run .\node_modules\.bin\doctoc README.md --github -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
